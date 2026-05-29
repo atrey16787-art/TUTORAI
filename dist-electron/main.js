@@ -72,8 +72,8 @@ ipcMain.handle('run-code', async (_event, code, language) => {
     return new Promise((resolve) => {
         const tempDir = os.tmpdir();
         const timestamp = Date.now();
-        let filePath = '';
-        let cmd = '';
+        let filePath = "";
+        let cmd;
         try {
             if (language === 'python') {
                 filePath = path.join(tempDir, `tutorai_temp_${timestamp}.py`);
